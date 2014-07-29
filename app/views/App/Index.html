@@ -1,0 +1,19 @@
+{{set . "title" "Home"}}
+{{ template "header.html"}}
+
+
+<table>
+    <tr>
+        <th>Name</th>
+    </tr>
+    {{ range $element := .users }}
+    <tr>
+      <td>{{$element.Name}}</td>
+    </tr>
+    {{ end }}
+</table>
+
+<a href="/">Back to form</a>
+
+{{template "footer.html"}}
+
